@@ -2,13 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-// import 'package:depd_2024_mvvm/data/app_exception.dart';
-// import 'package:depd_2024_mvvm/data/network/base_api_services.dart';
-// import 'package:depd_2024_mvvm/shared/shared.dart';
-import 'package:flutterapp_depd/data/app_exception.dart';
-import 'package:flutterapp_depd/data/network/base_api_services.dart';
-import 'package:flutterapp_depd/shared/shared.dart';
 import 'package:http/http.dart' as http;
+
+import '../../shared/shared.dart';
+import '../app_exception.dart';
+import 'base_api_services.dart';
 
 class NetworkApiServices implements BaseApiServices {
   @override

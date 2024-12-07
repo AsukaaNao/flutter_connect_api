@@ -4,7 +4,6 @@ import 'package:flutterapp_depd/model/city.dart';
 import 'package:flutterapp_depd/model/model.dart';
 import 'package:flutterapp_depd/view/widgets/widgets.dart';
 import 'package:flutterapp_depd/viewmodel/home_viewmodel.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 
 part 'cost_page.dart';

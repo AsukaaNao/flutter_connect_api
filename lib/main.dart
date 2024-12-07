@@ -1,7 +1,6 @@
 // import 'package:depd_2024_mvvm/view/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp_depd/view/pages/main_menu.dart';
-import 'package:flutterapp_depd/view/pages/pages.dart';
 
 void main() {
   runApp(const MyApp());
