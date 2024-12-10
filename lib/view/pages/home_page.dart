@@ -12,7 +12,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    homeViewmodel.getProvinceList();
+    homeViewmodel.getProvinceListOrigin();
+    homeViewmodel.getProvinceListDestination();
     super.initState();
   }
 
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         body: ChangeNotifierProvider<HomeViewmodel>(
             create: (BuildContext context) => homeViewmodel,
             child: Consumer<HomeViewmodel>(builder: (context, value, _) {
-              switch (value.provinceList.status) {
+              switch (value.provinceListDestination.status) {
                 case Status.loading:
                   return Align(
                     alignment: Alignment.center,
@@ -36,14 +37,15 @@ class _HomePageState extends State<HomePage> {
                 case Status.error:
                   return Align(
                     alignment: Alignment.center,
-                    child: Text(value.provinceList.message.toString()),
+                    child:
+                        Text(value.provinceListDestination.message.toString()),
                   );
                 case Status.completed:
                   return ListView.builder(
-                      itemCount: value.provinceList.data?.length,
+                      itemCount: value.provinceListDestination.data?.length,
                       itemBuilder: (context, index) {
-                        return CardProvince(
-                            value.provinceList.data!.elementAt(index));
+                        return CardProvince(value.provinceListDestination.data!
+                            .elementAt(index));
                       });
                 default:
               }
